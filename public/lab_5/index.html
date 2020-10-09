@@ -59,6 +59,10 @@
           function testFunction() {
         fetch('/api')
         .then((response) => response.text())
+        // .then((response) => {
+        //     const fruit = 'Fruit'
+        //     const label = document.querySelectorAll('.checkbox-list-label')
+        // })
         .then((response) => {
             const fruits = [ 'kiwi','dragonfruit', 'pomelo'];
             const checks = document.querySelectorAll('.flex-inner label')
@@ -68,6 +72,7 @@
                 check.innerText = fruits[i];
             }))
         })
+        document.body.style.backgroundColor = "red";
    }
       </script>
   </body>
