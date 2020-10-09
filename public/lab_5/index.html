@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Joelle Everett's Lab 4</title>
-    <link href="style.css" rel="stylesheet">
+    <title>Lab 5 for Joelle Everett</title>
+    <link href="styles.css" rel="stylesheet">
   </head>
 
   <body>
-    <h1>Joelle Everett's Lab 4</h1> 
+    <h1>Lab 5 for Joelle Everett</h1> 
     <div class="container">
         <form action="/api" method="post">
           <ul class="flex-outer">
@@ -32,7 +32,7 @@
               <textarea rows="5" cols="33" id="message" placeholder="Enter your message here"></textarea>
             </li>
             <li>
-              <p>Age</p>
+              <p class=".checkbox-list-label">Age</p>
               <ul class="flex-inner">
                 <li>
                   <input type="checkbox" id="twenty-to-twentynine">
@@ -50,9 +50,25 @@
             </li>
             <li>
               <button type="submit">Submit</button>
+              <button type="submit" onclick="testFunction()">Activate</button>
             </li>
           </ul>
         </form>
       </div>
+      <script>
+          function testFunction() {
+        fetch('/api')
+        .then((response) => response.text())
+        .then((response) => {
+            const fruits = [ 'kiwi','dragonfruit', 'pomelo'];
+            const checks = document.querySelectorAll('.flex-inner label')
+            console.log(checks.length, checks[0]);
+            checks.forEach(((check, i) => {
+                console.log(check, i);
+                check.innerText = fruits[i];
+            }))
+        })
+   }
+      </script>
   </body>
 </html>
