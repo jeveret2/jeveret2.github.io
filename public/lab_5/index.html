@@ -7,7 +7,7 @@
   </head>
 
   <body>
-    <h1>Lab 5 for Joelle Everett</h1> 
+    <h1 class="red">Lab 5 for Joelle Everett</h1> 
     <div class="container">
         <form action="/api" method="post">
           <ul class="flex-outer">
@@ -59,10 +59,15 @@
           function testFunction() {
         fetch('/api')
         .then((response) => response.text())
-        // .then((response) => {
-        //     const fruit = 'Fruit'
-        //     const label = document.querySelectorAll('.checkbox-list-label')
-        // })
+        .then((response) => {
+            const fruit = ['Fruit'];
+            const label = document.querySelectorAll('.checkbox-list-label')
+            console.log(label.length, label[0]);
+            label.forEach(((label, i) => {
+                console.log(label, i);
+                label.innerText = fruit[i];
+        }))
+    })
         .then((response) => {
             const fruits = [ 'kiwi','dragonfruit', 'pomelo'];
             const checks = document.querySelectorAll('.flex-inner label')
@@ -73,6 +78,8 @@
             }))
         })
         document.body.style.backgroundColor = "red";
+        document.getElementsByClassName("container")[0].style.backgroundColor = "red";
+        document.getElementsByClassName("red")[0].style.backgroundColor = "red";
    }
       </script>
   </body>
