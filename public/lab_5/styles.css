@@ -65,7 +65,7 @@ html, body {
     padding: 1%;
   }
   
-  .main, .header, nav, .article, .aside, footer, section {
+  .main, .header, nav, .article, .aside, .red, footer, section {
     background-color:#be93d4;
     padding: 1%;
   }
@@ -154,6 +154,7 @@ html, body {
     width: 80%;
     max-width: 1200px;
     margin: 0 auto;
+    background-color:#be93d4;
   }
   
   .container * {
