@@ -1,7 +1,6 @@
-
 /*CSS*/
 body {
-  background: #eee;
+  background: #3895a8;
 }
 
 .wrapper {
@@ -26,12 +25,12 @@ body {
   border-radius: 4px;
 }
 
+/* Enter YOUR lab styles after this line */
 .flex-outer li,
 .flex-inner {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  flex-direction: column;
 }
 
 .flex-outer > li > label,
@@ -47,26 +46,17 @@ body {
 }
 
 .flex-outer button {
-  background-color: darkolivegreen;
-  color: white;
+  margin-left: 0px;
+  margin-right: 10px;
   padding: 6px 12px;
   border: none;
   text-transform: uppercase;
   letter-spacing: 1.2px;
   border-radius: 3px;
-  display: block;
-  margin: 0 auto;
 }
 
 .flex-inner li {
-  width: 100%;
-  padding: 8px 16px;
-  display: flex;
-  flex-direction: row;
-}
-
-.flex-inner input {
-  margin-right: 15px;
+  width: 95px;
 }
 
 .flex-inner {
@@ -75,39 +65,6 @@ body {
 }
 
 .flex-outer {
-  width: 960px;
+  max-width:800px;
   padding: 0 16px;
-  margin:0 auto;
 }
-
-/* New for Lab 7 */
-h1 {
-  margin: 20px 50px;
-  padding: 0 20px;
-  min-height: 75px;
-  background-color: darkolivegreen;
-  color: white;
-  display: flex;
-  
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 1.5em;
-  text-transform: capitalize;
-  flex-wrap: nowrap;
-  border-radius: 4px;
-}
-
-#chartContainer {
-    background: gray;
-    border: 2px dotted black;
-    border-radius: 4px;
-    height: 500px;
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-button {
-    color: blue;
-}
-
